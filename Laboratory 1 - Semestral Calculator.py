@@ -1,13 +1,16 @@
 def calculator():
     global result
+
     Fullname = input("Full Name: ")
     student_number = input("Student#: ")
     course = input("Course: ")
     prelims = input("Prelim: ")
-    midterm = input("Midterm: ")
+    midterms = input("Midterm: ")
     finals = input("Finals: ")
-    Final_average = (float(prelims) + float(midterm) + float(finals)) / 3
-    Final_averages = round(Final_average, 2)
+
+    prelim, midterm, final = 0.3, 0.3, 0.4
+    Final_average = prelim + midterm + final
+    Final_grade = round(Final_average, 2)
     Happy = "\U0001F600"
     Laugh = "\U0001F606"
     Sad = "\U0001F62D"
@@ -17,17 +20,17 @@ def calculator():
         result = Laugh
     elif Final_average < 70:
         result = Sad
+
     print(("\nFull name: " + Fullname) +
           ("\nStudent#: " + student_number) +
           ("\nCourse: " + course) +
           ("\nPrelim Grade: " + prelims) +
-          ("\nMidterm Grade: " + midterm) +
+          ("\nMidterm Grade: " + midterms) +
           ("\nFinal Grade: " + finals) +
-          ("\nFinal Average Grade on this course: " + str(Final_averages)) +
+          ("\nFinal Average on this course: " + str(Final_grade)) +
           ("\nResult: " + result) +
-          '\n------------------------------------------------------')
+           "\n------------------------------------------------------")
     calculateagain()
-
 
 def calculateagain():
     print("")
