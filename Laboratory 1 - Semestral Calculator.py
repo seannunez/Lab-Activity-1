@@ -8,18 +8,20 @@ def calculator():
     midterms        = input("Midterm: ")
     finals          = input("Finals: ")
 
+
     Final_average = (int(prelims) + int(midterms) + int(finals)) / 3
     Happy = "\U0001F600"
     Laugh = "\U0001F606"
     Sad   = "\U0001F62D"
-    if   Final_average > 70:
+    if Final_average > 70:
         result = Happy
     elif Final_average == 70:
         result = Laugh
     elif Final_average < 70:
         result = Sad
-
-    print("Hello {},{}!!! your semestral grade in {} is: {:.2f} ".format(Fullname, student_number, course, Final_average))
+    print("")
+    print("Hello {},({})!!! your semestral grade in {} is: {:.2f} {} "
+          .format(Fullname, student_number, course, Final_average, result))
     calculateagain()
 
 
