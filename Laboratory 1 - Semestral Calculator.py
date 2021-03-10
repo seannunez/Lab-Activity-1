@@ -27,7 +27,7 @@ def calculator():
           ("\nPrelim Grade: " + prelims) +
           ("\nMidterm Grade: " + midterms) +
           ("\nFinal Grade: " + finals) +
-          ("\nFinal Average on this course: " + str(Final_grade)) +
+          ("\nFinal Average Grade on this course: " + str(Final_grade)) +
           ("\nResult: " + result) +
            "\n------------------------------------------------------")
     calculateagain()
